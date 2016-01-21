@@ -1,0 +1,31 @@
+$tablet: 'max-width 768px 12 !default';
+$desktop: 'max-width 1024px 12 !default';
+
+.container {
+  width: 100%;
+  @media screen and ($tablet) {
+    width: 90%;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  @media screen and ($desktop) {
+    max-width: 1040px;
+    margin: 0 auto;
+  }
+}
+
+section {
+  width: 100%;
+  @media screen and ($tablet) {
+    width: 50%;
+  }
+  @media screen and ($desktop) {
+    max-width: 25%;
+  }
+}
+
+body {
+  background-image: url('img/flappy-pipe-land.jpg');
+  background-repeat: no-repeat;
+  background-position: right;
+}
