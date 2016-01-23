@@ -1,2 +1,194 @@
+$tablet: 'min-width: 768px';
+$desktop: 'min-width: 1024px';
+$link-color: #e0edf3;
+$link-hover: #576c88;
+$link-click: #f2fff5;
+$font-color: #fff;
+$font-stack: 'Ubuntu', Helvetica, sans-serif;
+$background-color: #000;
+$background-color-2: #eee;
+
+
 body {
+  color: $font-color;
+  font-family: $font-stack;
+  background-color: $background-color;
+  background-image: url('../img/flap-trans-bird.png');
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: 200px 200px;
+  background-attachment: fixed;
 }
+
+nav {
+  /*background-color: $background-color;*/
+  height: 3.5em;
+  padding-top: 0.5em;
+  ul {
+    float: left;
+  }
+  li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 1em;
+    cursor: pointer;
+    & :hover {
+      color: $link-hover;
+  }
+  a {
+    text-decoration: none;
+    font-weight: 300;
+    color: $link-color;
+    }
+  }
+}
+
+
+
+header {
+  margin-top: 4em;
+  font-size: 2.6em;
+  font-weight: 700;
+  img {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 2.5em;
+  }
+  h1 {
+    margin-left: 1em;
+    border-bottom: 1px solid $font-color;
+    margin-bottom: 2.5em;
+  }
+}
+
+/*462x413*/
+
+
+.top-line {
+  color: $font-color;
+  margin-left: 1em;
+  h2 {
+    font-weight: 700;
+    font-size: 2em;
+  }
+  p {
+    width: 100%;
+    font-weight: 300;
+    line-height: 1.2em;
+    margin-bottom: 3em;
+  }
+}
+
+.features {
+  width: 100%;
+  ul{
+    li {
+      list-style: none;
+      h2 {
+        font-size: 2em;
+        margin-bottom: 0.25em;
+        margin-top: 0.1em;
+      }
+      img {
+        height: 207px;
+        width: 231px;
+        border: 10px solid #ddd;
+        box-shadow: 5px;
+      }
+      p {
+        font-weight: 300;
+        margin-bottom: 2em;
+        margin-top: 0.2em;
+      }
+    }
+  }
+}
+
+.call {
+  text-align: center;
+  width: 60%;
+  margin: 3em auto 2em auto;
+  border: 1px solid $link-color;
+  border-radius: 5px;
+  a {
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 2.5em;
+    color: $link-color;
+    cursor: pointer;
+    &:hover {
+    color: $link-hover;
+    }
+    &:active {
+    color: $link-click;
+    }
+  }
+}
+
+
+.social {
+  font-size: 1em;
+  color: $link-color;
+  a {
+    margin-left: 1em;
+    text-decoration: none;
+    margin-right: 1.5em;
+  }
+  i {
+    color: $link-color;
+    text-align: center;
+  }
+}
+footer {
+  text-align: center;
+}
+
+
+
+
+
+section {
+    width: 90%;
+    @media screen and ($tablet) {
+      width: 90%;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    @media screen and ($desktop) {
+      max-width: 1040px;
+      margin: 0 auto;
+    }
+}
+
+body {
+    width: 100%;
+  @media screen and ($tablet) {
+      width: 100%;
+
+  }
+  @media screen and ($desktop) {
+      max-width: 100%;
+
+  }
+}
+
+header {
+    width: 100%;
+  @media screen and ($tablet) {
+      width: 90%;
+
+  }
+  @media screen and ($desktop) {
+      max-width: 90%;
+  }
+}
+
+
+
+
+
+
+
+
+
