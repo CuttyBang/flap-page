@@ -10,18 +10,27 @@ $background-color-2: #eee;
 
 
 body {
-  color: $font-color;
-  font-family: $font-stack;
-  background-color: $background-color;
-  background-image: url('../img/flap-trans-bird.png');
-  background-repeat: no-repeat;
-  background-position: top right;
-  background-size: 200px 200px;
-  background-attachment: fixed;
+    width: 100%;
+    color: $font-color;
+    font-family: $font-stack;
+    background-color: $background-color;
+    background-image: url('../img/flap-trans-bird.png');
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 200px 200px;
+    background-attachment: fixed;
+  @media screen and ($tablet) {
+      width: 100%;
+      background-size: 400px 400px;
+  }
+  @media screen and ($desktop) {
+      max-width: 100%;
+      background-size: 600px 600px;
+
+  }
 }
 
 nav {
-  /*background-color: $background-color;*/
   height: 3.5em;
   padding-top: 0.5em;
   ul {
@@ -41,12 +50,24 @@ nav {
     color: $link-color;
     }
   }
+  @media screen and ($tablet) {
+    li {
+      margin-right: 2em;
+      font-size: 1.2em;
+    }
+  }
+  @media screen and ($desktop) {
+    li {
+      margin-right: 4em;
+      font-size: 1.5em;
+    }
+  }
 }
 
 
 
 header {
-  margin-top: 4em;
+  margin-top: 2em;
   font-size: 2.6em;
   font-weight: 700;
   img {
@@ -59,6 +80,25 @@ header {
     margin-left: 1em;
     border-bottom: 1px solid $font-color;
     margin-bottom: 2.5em;
+  }
+  @media screen and ($tablet) {
+      width: 100%;
+      img {
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-bottom: 2.5em;
+      }
+  }
+  @media screen and ($desktop) {
+      max-width: 100%;
+      img {
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-bottom: 2.5em;
+        margin-top: 3em;
+      }
   }
 }
 
@@ -78,6 +118,29 @@ header {
     line-height: 1.2em;
     margin-bottom: 3em;
   }
+  @media screen and ($tablet) {
+    margin: 0 auto;
+    h2 {
+      width: 100%;
+      text-align: center;
+    }
+    p {
+      width: 100%;
+      text-align: center;
+    }
+   
+  }
+  @media screen and ($desktop) {
+    margin: 0 auto;
+    h2 {
+      width: 100%;
+      text-align: center;
+    }
+    p {
+      width: 100%;
+      text-align: center;
+    }
+  }
 }
 
 .features {
@@ -94,12 +157,42 @@ header {
         height: 207px;
         width: 231px;
         border: 10px solid #ddd;
-        box-shadow: 5px;
       }
       p {
         font-weight: 300;
         margin-bottom: 2em;
         margin-top: 0.2em;
+      }
+    }
+  }
+  @media screen and ($tablet) {
+    ul {
+      li {
+        img {
+          height: 310px;
+          width: 336px;
+          margin-left: 27.5%;
+          margin-right: 29.5%;
+        }
+        h2 {
+          text-align: center;
+        }
+        p {
+          text-align: center;
+        }
+      }
+    }
+  }
+  @media screen and ($desktop) {
+    ul {
+      li {
+        width: 100%;
+        img {
+          height: 413px;
+          width: 462px;
+          margin-right: 27.5%;
+          margin-left: 24.5%;
+        }
       }
     }
   }
@@ -109,16 +202,17 @@ header {
   text-align: center;
   width: 60%;
   margin: 3em auto 2em auto;
-  border: 1px solid $link-color;
-  border-radius: 5px;
   a {
     text-decoration: none;
     font-weight: 700;
     font-size: 2.5em;
+    border: 1px solid $link-color;
+    border-radius: 5px;
     color: $link-color;
     cursor: pointer;
     &:hover {
     color: $link-hover;
+    background-color: #aaa;
     }
     &:active {
     color: $link-click;
@@ -131,15 +225,29 @@ header {
   font-size: 1em;
   color: $link-color;
   a {
-    margin-left: 1em;
+    margin-left: 1.25em;
     text-decoration: none;
-    margin-right: 1.5em;
+    margin-right: 1.25em;
   }
   i {
     color: $link-color;
     text-align: center;
+    &:hover {
+    color: $link-hover;
+    }
+    &:active {
+    color: $link-click;
+    }
   }
+  @media screen and ($tablet) {
+    font-size: 2em;
+    }
+    @media screen and ($desktop) {
+    font-size: 3em;
+    }
 }
+
+
 footer {
   text-align: center;
 }
@@ -151,38 +259,18 @@ footer {
 section {
     width: 90%;
     @media screen and ($tablet) {
-      width: 90%;
+      padding: 0;
+      width: 100%;
       max-width: 960px;
       margin: 0 auto;
     }
     @media screen and ($desktop) {
+      padding: 0;
       max-width: 1040px;
       margin: 0 auto;
     }
 }
 
-body {
-    width: 100%;
-  @media screen and ($tablet) {
-      width: 100%;
-
-  }
-  @media screen and ($desktop) {
-      max-width: 100%;
-
-  }
-}
-
-header {
-    width: 100%;
-  @media screen and ($tablet) {
-      width: 90%;
-
-  }
-  @media screen and ($desktop) {
-      max-width: 90%;
-  }
-}
 
 
 
