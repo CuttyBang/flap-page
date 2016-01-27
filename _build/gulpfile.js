@@ -26,7 +26,7 @@ var dirs = {
 gulp.task('jshint', function() {
   return gulp.src(dirs.theme + dirs.assets +  dirs.js + '*.js')
   .pipe(jshint())
-  .pipe(jshint.reporter());
+  .pipe(jshint.reporter('jshint-stylish'));
 });
 
 //sass
