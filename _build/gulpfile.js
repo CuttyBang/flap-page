@@ -24,8 +24,10 @@ var dirs = {
 
 //jshint
 gulp.task('jshint', function() {
-  return gulp.src(dirs.theme + dirs.assets +  dirs.js + '*.js')
-  .pipe(jshint())
+  return gulp.src(dirs.js + 'main.js')
+  .pipe(jshint({
+    asi: true
+  }))
   .pipe(jshint.reporter('jshint-stylish'));
 });
 
