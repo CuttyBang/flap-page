@@ -15,10 +15,16 @@ $(document).ready(function() {
   .setVelocity('.features', {opacity: 0}, {duration: 1000})
   .addTo(controller);
 
+  var caller = new ScrollMagic.Scene({
+    triggerElement: '#trigger2'
+  })
+  .setVelocity('.call', {scale: 1.3}, {duration: 1000})
+  .addTo(controller);
 
-  function getDur(){
-    return $('.features').outerHeight(true);
-  }
+
+  //function getDur(){
+    //return $('.features').outerHeight(true);
+  //}
 
   function navs(){
     $('.menu ul li').velocity('transition.slideRightIn', {
@@ -43,7 +49,7 @@ $(document).ready(function() {
 
   $('.call').click(function(){
     $('.call').velocity(
-      {scale: 1.3},
+      {scale: 1.8},
       {duration: 200}
     )
     .velocity(

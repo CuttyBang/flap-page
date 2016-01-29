@@ -159,7 +159,8 @@ FEATURES UL
     .features ul li img {
       height: 207px;
       width: 231px;
-      border: 10px solid #ddd; }
+      border: 10px solid #ddd;
+      border-radius: 100%; }
     .features ul li h2 {
       font-size: 2em;
       margin-bottom: 0.25em;
