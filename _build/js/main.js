@@ -1,28 +1,23 @@
 $(document).ready(function() {
   navs();
   head();
-  pip();
+
+  var controller = new ScrollMagic.Controller();
+  var scene = new ScrollMagic.Scene({
+    triggerElement: '#trigger1'
+  })
+  .setVelocity('.features', {opacity: 1}, {duration: 1000})
+  .addTo(controller);
+
+  var end = new ScrollMagic.Scene({
+    triggerElement: '#trigger2'
+  })
+  .setVelocity('.features', {opacity: 0}, {duration: 1000})
+  .addTo(controller);
 
 
-
-  $('.call').click(function(){
-    $('.call').velocity(
-      {scale: 1.3},
-      {duration: 200}
-    )
-    .velocity(
-      {scale: 0},
-      {duration: 800,
-      visibility: "hidden"}
-    );
-  });
-
-
-  function pip(){
-    $('#cred').velocity(
-      'transition.flipXIn',
-      {stagger: 200, drag: true}
-    );
+  function getDur(){
+    return $('.features').outerHeight(true);
   }
 
   function navs(){
@@ -36,6 +31,28 @@ $(document).ready(function() {
       stagger: 800
     });
   }
+
+  $('.features').velocity({opacity: 0});
+
+  $('.top-line').velocity(
+    {opacity: 0}
+  )
+  .velocity(
+    {opacity: 1},
+    {duration: 2000})
+
+  $('.call').click(function(){
+    $('.call').velocity(
+      {scale: 1.3},
+      {duration: 200}
+    )
+    .velocity(
+      {scale: 0},
+      {duration: 200,
+      visibility: "hidden"}
+    );
+  });
+
 
 
 });
