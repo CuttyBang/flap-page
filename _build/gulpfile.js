@@ -66,6 +66,6 @@ gulp.task('images', function() {
     .pipe(gulp.dest(dirs.theme + dirs.assets +  dirs.img));
 });
 
-gulp.task('default', ['jshint', 'sass', 'watch']);
+gulp.task('default', ['watch']);
 
-gulp.task('build', ['jshint', 'sass', 'scripts', 'styles']);
+gulp.task('build', gulpsync.sync(['sass', 'styles', 'jshint', 'scripts']));
